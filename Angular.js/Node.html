@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+<script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+</head>
+<body>
+    <h2>Node</h2>
+<ul ng-repeat="ptutor in tutorial">
+    <li>Course : {{ptutor.Name}} - {{ptutor.Description}}</li>
+</ul>
+<script>
+    sampleApp.controller('AngularController',function($scope) {
+    
+        $scope.tutorial = [
+            {Name:"Controllers",Description :"Controllers in action"},
+            {Name:"Models",Description :"Models and binding data"},
+            {Name:"Directives",Description :"Flexibility of Directives"}
+        ]
+    });
+    
+    sampleApp.controller('NodeController',function($scope){
+    
+        $scope.tutorial = [
+            {Name:"Promises",Description :"Power of Promises"},
+            {Name:"Event",Description :"Event of Node.js"},
+            {Name:"Modules",Description :"Modules in Node.js"}
+            ]
+    });
+    </script>
+</body>
+</html>
